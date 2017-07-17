@@ -36,13 +36,18 @@
 </head>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    var n = parseInt(100*Math.random());
-
+    var n = Math.round(Math.random()*355+1)
+    var m = Math.round(Math.random()*99+10)
     setTimeout(function () {
     	console.log(n);
     	$("#wrap").css("height",parseInt($("#main").height())+500)
 		$("#banner").css("background","0")
 		$("#wrap").css("background",'url("http://www.ruanyifeng.com/images_pub/pub_'+n+'.jpg")')
+//		$("#wrap").css("background-size","100% auto")
+        $("#sidebar .widget-title").css("color","#"+m+"0"+m+"f");
+        $("#sidebar .archive-list-link").css("color","#"+m+"0"+m+"f");
+        $("#sidebar .widget ul li a").css("color","#"+m+"0"+m+"f");
+        $("#mygit").css("color","#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6))
 		//$("#wrap").css("background-size","100% 100%")
 		//$("#banner").css("background-size","100%")
 	},0)
